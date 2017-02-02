@@ -19,5 +19,9 @@ end
 
 def check_for_letters(letters)
 
-	!!letters.match(/[a-z A-Z]/)# !! returns true or false
+	if letters.match(/[a-z A-Z]/)# !! returns true or false
+		false
+	else
+		true
+	end
 end

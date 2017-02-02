@@ -29,8 +29,9 @@ class TestIsbnFunction < Minitest::Test
 	end
 	def test_check_for_letters
 		num = '123m456d7890'
-		assert_equal(true, check_for_letters(num))
+		assert_equal(false, check_for_letters(num))
 	end
-
+	#def test_if_x_must_be_at_the_end
+		#num = '123'
 
 end
