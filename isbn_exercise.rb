@@ -16,3 +16,8 @@ def remove_spaces_and_dashes(isbn_string)
 		isbn_string.delete!(' ')# ! makes it pass, no comma between (' ') '-'
 		isbn_string.delete('-')
 end
+
+def check_for_letters(letters)
+
+	!!letters.match(/[a-z A-Z]/)# !! returns true or false
+end

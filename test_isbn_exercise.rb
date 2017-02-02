@@ -23,9 +23,14 @@ class TestIsbnFunction < Minitest::Test
 			num = '123 456 789 0' #isbn string
 			assert_equal('1234567890', remove_spaces_and_dashes(num))
 	end
-	def test_remove_spaces_dashes
+	def test_remove_dashes
 			num = '123-456-789-0'
 			assert_equal('1234567890', remove_spaces_and_dashes(num))
 	end
+	def test_check_for_letters
+		num = '123m456d7890'
+		assert_equal(true, check_for_letters(num))
+	end
+
 
 end
