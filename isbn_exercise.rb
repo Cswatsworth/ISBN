@@ -25,3 +25,19 @@ def check_for_letters(letters)
 		true
 	end
 end
+
+def check_for_x (x_at_end)
+
+	# x_at_end.upcase
+	# if x_at_end[-1] == 'X' || x_at_end[-1] ==[0..9]
+	# 	true
+	# else
+	# 	false
+	# end
+
+	if x_at_end[-1].match(/[0-9 x X]/)
+		true
+	else
+		false
+	end
+end

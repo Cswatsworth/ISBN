@@ -28,10 +28,12 @@ class TestIsbnFunction < Minitest::Test
 			assert_equal('1234567890', remove_spaces_and_dashes(num))
 	end
 	def test_check_for_letters
-		num = '123m456d7890'
-		assert_equal(false, check_for_letters(num))
+			num = '123m456d7890'
+			assert_equal(false, check_for_letters(num))
 	end
-	#def test_if_x_must_be_at_the_end
-		#num = '123'
+	def test_true_if_x_is_at_the_end
+			num = '123456789x'
+			assert_equal(true, check_for_x(num))
+	end
 
 end
