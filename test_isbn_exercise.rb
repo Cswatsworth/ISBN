@@ -32,7 +32,7 @@ class TestIsbnFunction < Minitest::Test
 			assert_equal(false, check_for_letters(num))
 	end
 	def test_true_if_x_is_at_the_end
-			num = '123456789x'
+			num = '123456789012x'
 			assert_equal(true, check_for_x(num))
 	end
 
