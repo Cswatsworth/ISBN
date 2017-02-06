@@ -28,14 +28,24 @@ end
 
 def check_for_x (x_at_end)
 
-	# x_at_end.upcase
-	# if x_at_end[-1] == 'X' || x_at_end[-1] ==[0..9]
-	# 	true
-	# else
-	# 	false
-	# end
+	if x_at_end[-1].match(/[0-9 x X]/) #/starts a reg. expression, /ends it
+		true
+	else
+		false
+	end
+end
 
-	if x_at_end[-1].match(/[0-9 x X]/)
+# def check_for_symbols (symbols)
+
+# 	if symbols =[';']  [^0-9] 
+# 			true
+# 		else
+# 			false
+# 	end
+# end
+
+def isbn_length?(num)
+	if num.length == 13
 		true
 	else
 		false
