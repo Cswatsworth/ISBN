@@ -43,10 +43,14 @@ def isbn_length?(num)
 		false
 	end
 end
-# def check_for_symbols(isbn_string)
-# 	isbn_string.delete(';')
-# 	isbn_string.delete(':')
-# end
+
+
+def remove_symbols(isbn_string)
+	isbn_string.delete!(';')#only passing with '!' why?
+	isbn_string.delete(':')
+end
+
+
 def check_for_symbols(num)
 	if num == '123;456:7890'
 		true
