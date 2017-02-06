@@ -74,8 +74,12 @@ class TestIsbnFunction < Minitest::Test
 			results = remainder(11)
 			assert_equal(0, results)
 	end
-	def test_returns_modulus_11e
+	def test_returns_modulus_11
 			results = remainder(232)
 			assert_equal(1, results)
+	end
+	def test_remainder_results_equal_to_last_digit
+			results = compaire_check_digit('877195869x')
+			assert_equal(true, results)
 	end
 end
