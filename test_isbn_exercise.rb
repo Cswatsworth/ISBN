@@ -5,7 +5,6 @@ class TestIsbnFunction < Minitest::Test
 	def test_1_equals_1
 		assert_equal(1,1)
 	end
-
 	def test_returns_true
 			num = '1234567890'
 			assert_equal(true, valid_ispn_length?(num))
@@ -35,12 +34,16 @@ class TestIsbnFunction < Minitest::Test
 			num = '123456789012x'
 			assert_equal(true, check_for_x(num))
 	end
-	# def test_for_symbols
-	# 		num = '123;45'
-	# 		assert_equal(false, check_for_symbols)
-	# end
 	def  test_for_length_13
 			num = '1234567890123'
 			assert_equal(true, isbn_length?(num))
+	end
+	# def test_for_symbols
+	# 		num = '123;45:6'
+	# 		assert_equal('123456', remove_symbols(num))
+	# end
+	def test_for_symbols_return_true #true if isbn has symbols
+			num = '123;456:7890'
+			assert_equal(true, check_for_symbols(num))
 	end
 end

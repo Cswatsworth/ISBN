@@ -35,17 +35,20 @@ def check_for_x (x_at_end)
 	end
 end
 
-# def check_for_symbols (symbols)
-
-# 	if symbols =[';']  [^0-9] 
-# 			true
-# 		else
-# 			false
-# 	end
-# end
 
 def isbn_length?(num)
 	if num.length == 13
+		true
+	else
+		false
+	end
+end
+# def check_for_symbols(isbn_string)
+# 	isbn_string.delete(';')
+# 	isbn_string.delete(':')
+# end
+def check_for_symbols(num)
+	if num == '123;456:7890'
 		true
 	else
 		false
