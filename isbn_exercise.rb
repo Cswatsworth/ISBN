@@ -52,16 +52,7 @@ end
 
 
 def check_for_symbols(num)
-	if num == '123;456:7890'
-		true
-	else
-		false
-	end
-end
-
-
-def check_for_symbols(num)
-	if num =~ /\D/
+	if num =~ /\D/ # little d, finds any digit, big D finds any non digit
 		true
 	else
 		false
