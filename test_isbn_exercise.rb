@@ -31,7 +31,7 @@ class TestIsbnFunction < Minitest::Test
 			assert_equal(false, check_for_letters(num))
 	end
 	def test_true_if_x_is_at_the_end
-			num = '123456789012x'
+			num = '123456789x'
 			assert_equal(true, check_for_x(num))
 	end
 	def  test_for_length_13
@@ -46,4 +46,8 @@ class TestIsbnFunction < Minitest::Test
 			num = '123;456:7890'
 			assert_equal(true, check_for_symbols(num))
 	end
+	# def test_isbn_is_10_seperate_arrays
+	# 		num = '1234567890'
+	# 		assert_equal(["1","2","3","4","5","6","7","8","9","0"], isbn_array(num))
+	# end
 end

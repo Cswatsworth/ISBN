@@ -58,3 +58,10 @@ def check_for_symbols(num)
 		false
 	end
 end
+
+# def isbn_array(isbn_array)
+# 	if isbn_array.include? [" "]
+# 		true
+# 	else
+# 		false
+# 	end
