@@ -81,7 +81,10 @@ def multiply(isbn_num)
 end
 
 def sum(isbn_array)
-	isbn_array.inject(:+) 
-
+	# isbn_array.inject(:+) 
+	counter = 0
+	isbn_array.each do |value|
+	counter = counter + value 
+	end
+	counter
 end
-
