@@ -90,4 +90,8 @@ class TestIsbnFunction < Minitest::Test
 			results = compaire_check_digit('123654789')
 			assert_equal(false, results)
 	end
+	def test_invalid_character
+			results = compaire_check_digit('123$56789')#passes with non digits
+			assert_equal(false, results)
+	end
 end
