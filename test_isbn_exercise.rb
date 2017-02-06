@@ -42,7 +42,7 @@ class TestIsbnFunction < Minitest::Test
 			num = '1234567890123'
 			assert_equal(true, isbn_length?(num))
 	end
-	def test_for_symbols
+	def test_for_symbols #extra test, using different method
 			num = '123;45:67890'
 			assert_equal('1234567890', remove_symbols(num))
 	end
@@ -62,4 +62,5 @@ class TestIsbnFunction < Minitest::Test
 			num = '1234567890'
 			assert_equal(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], isbn_array(num))
 	end
+
 end

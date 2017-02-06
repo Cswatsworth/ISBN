@@ -2,7 +2,7 @@ def valid_ispn_length?(num)#<<num is a string '1234...'
 				#passing in string, want a boolean returned
 				#boolean, true or false.
 		
-		if num.length == 10
+		if num.length == 10 || num.length == 13
 			true
 		else 
 			false
@@ -19,7 +19,7 @@ end
 
 def check_for_letters(letters)
 
-	if letters.match(/[a-z A-Z]/)# !! returns true or false
+	if letters.chop.match(/[a-zA-Z]/)# !! returns true or false
 		false
 	else
 		true
@@ -52,8 +52,8 @@ end
 
 
 def check_for_symbols(num)
-	if num =~ /\D/ # little d, finds any digit, big D finds any non digit
-		true
+	if num.chop =~ /\D/ # little d, finds any digit, big D finds any non digit
+		true			#.chop deletes last position
 	else
 		false
 	end
