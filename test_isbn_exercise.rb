@@ -94,4 +94,12 @@ class TestIsbnFunction < Minitest::Test
 			results = compaire_check_digit('123$56789')#passes with non digits
 			assert_equal(false, results)
 	end
+	def test_remainder_equal_to_last_digit_false2
+			results = compaire_check_digit('12#^567')
+			assert_equal(false, results)
+	end
+	def test_valid_ispn
+		results = valid_ispn?('0132971291')
+		assert_equal(true, results)
+	end
 end

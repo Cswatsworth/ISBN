@@ -1,6 +1,20 @@
+def valid_ispn?(isbn_num)
+	string_no_dashes_or_spaces = remove_spaces_and_dashes(isbn_num)
+		if valid_ispn_length? (string_no_dashes_or_spaces)
+			true
+		else
+			false
+		end
+end
+	# remove_spaces_and_dashes(valid_ispn_length)
+	# check_for_letters(remove_spaces_and_dashes)
+	# check_for_x(
+
+
 def valid_ispn_length?(num)#<<num is a string '1234...'	
 				#passing in string, want a boolean returned
 				#boolean, true or false.
+		
 		
 		if num.length == 10 || num.length == 13
 			true
