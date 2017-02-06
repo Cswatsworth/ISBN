@@ -85,6 +85,11 @@ def sum(isbn_array)
 	counter = 0					#iterate through instead of using .inject 
 	isbn_array.each do |value|	#.inject or .reduce
 	counter += value #'counter = counter + value' also can be used 
+		
 	end
 	counter
+end
+
+def remainder(isbn_num)
+	isbn_num % 11
 end
