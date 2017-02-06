@@ -82,4 +82,12 @@ class TestIsbnFunction < Minitest::Test
 			results = compaire_check_digit('877195869x')
 			assert_equal(true, results)
 	end
+	def test_remainder_equal_to_last_digit
+			results = compaire_check_digit('877195869X')
+			assert_equal(true, results)
+	end
+	def test_remainder_false
+			results = compaire_check_digit('123654789')
+			assert_equal(false, results)
+	end
 end

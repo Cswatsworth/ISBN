@@ -100,7 +100,7 @@ def compaire_check_digit(isbn_num)
 		isbn_total = sum(isbn_value)
 		isbn_mod = remainder(isbn_total) 
 		
-			if isbn_mod == 10 && isbn_num[-1].match(/[xX]/) 
+			if isbn_mod == 10 && isbn_num[-1].match(/[xX]/)
 				true
 			elsif isbn_mod != 10 && isbn_num[-1] == isbn_mod
 				true
