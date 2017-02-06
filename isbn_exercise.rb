@@ -26,9 +26,9 @@ def check_for_letters(letters)
 	end
 end
 
-def check_for_x (x_at_end)
+def check_for_x(x_at_end)
 
-	if x_at_end[-1].match(/[0-9 x X]/) #/starts a reg. expression, /ends it
+	if x_at_end[-1].match(/[0-9xX]/) #/starts a reg. expression, /ends it
 		true
 	else
 		false
@@ -59,9 +59,18 @@ def check_for_symbols(num)
 	end
 end
 
-# def isbn_array(isbn_array)
-# 	if isbn_array.include? [" "]
-# 		true
-# 	else
-# 		false
-# 	end
+
+def check_for_symbols(num)
+	if num =~ /\D/
+		true
+	else
+		false
+	end
+end
+
+
+
+
+def isbn_array(isbn_string)
+		num = isbn_string.split(//)
+end

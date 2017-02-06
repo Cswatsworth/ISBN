@@ -50,8 +50,17 @@ class TestIsbnFunction < Minitest::Test
 			num = '123;456:7890'
 			assert_equal(true, check_for_symbols(num))
 	end
-	# def test_isbn_is_10_seperate_arrays
-	# 		num = '1234567890'
-	# 		assert_equal(["1","2","3","4","5","6","7","8","9","0"], isbn_array(num))
-	# end
+	def test_second_test_for_symbols
+			num = '123;4567890'
+			assert_equal(true, check_for_symbols(num))
+	end
+	def tes_thrid_test_for_symbols #false becuase it does not have symbols
+			num = '1234567890'
+			assert_equal(false, check_for_symbols(num))
+	end
+	def test_isbn_is_10_seperate_arrays
+			num = '1234567890'
+			assert_equal(["1", "2", "3", "4", "5", "6", "7", "8", "9", "0"], isbn_array(num))
+	end
+
 end
