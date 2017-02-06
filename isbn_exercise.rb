@@ -82,9 +82,9 @@ end
 
 def sum(isbn_array)
 	# isbn_array.inject(:+) 
-	counter = 0
-	isbn_array.each do |value|
-	counter = counter + value 
+	counter = 0					#iterate through instead of using .inject 
+	isbn_array.each do |value|	#.inject or .reduce
+	counter += value #'counter = counter + value' also can be used 
 	end
 	counter
 end

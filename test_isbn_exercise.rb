@@ -69,5 +69,5 @@ class TestIsbnFunction < Minitest::Test
 	def test_sum_of_isbn
 			results = sum([1,2,3,4,5,6,7,8,9])
 			assert_equal(45, results)
-	end
+	end 
 end
