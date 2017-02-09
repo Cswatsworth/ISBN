@@ -1,6 +1,6 @@
 def valid_isbn?(isbn_num)
 	string_no_dashes_or_spaces = remove_spaces_and_dashes(isbn_num)
-		if valid_ispn_length? (string_no_dashes_or_spaces)
+		if valid_isbn_length? (string_no_dashes_or_spaces)
 			true
 		else
 			false
@@ -33,7 +33,7 @@ end
 
 def check_for_letters(letters)
 
-	if letters.chop.match(/[a-zA-Z]/)# !! returns true or false
+	if letters.chop.match(/[a-zA-Z]/)# !! can return true or false
 		false
 	else
 		true
@@ -111,7 +111,7 @@ end
 def compaire_check_digit(isbn_num)
 	
 		isbn_value = multiply(isbn_num)
-		isbn_total = sum(isbn_value)
+		isbn_total = total(isbn_value)
 		isbn_mod = remainder(isbn_total) 
 		
 			if isbn_mod == 10 && isbn_num[-1].match(/[xX]/)

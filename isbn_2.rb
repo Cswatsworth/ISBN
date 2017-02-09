@@ -7,7 +7,6 @@ def valid_isbn? (isbn_num)
 		end
 	
 end
-
 def valid_isbn_length?(num) 
 	if num.length == 10 || num.length == 13
 		true
@@ -15,9 +14,29 @@ def valid_isbn_length?(num)
 		false
 	end
 end
-
 def remove_spaces_and_dashes(isbn_string)
-
+	#OR isbn_num.gsub(/[ -]/, '') #a regex
 	isbn_string.delete!(' ')
 	isbn_string.delete('-')
 end
+def check_for_x(isbn_x)
+ 	if isbn_x[-1].match(/[0-9xX]/)
+ 		true
+ 	else
+ 		false
+ 	end
+ end
+ def check_for_letters(letters)
+ 	if letters.chop.match(/[a-zA-Z]/)
+ 		false
+ 	else
+ 		true
+ 	end
+ end
+ def check_for_symbols(isbn_num)
+ 	if isbn_num.chop =~ /\D/ #removing anything non numeric
+ 		false
+ 	else
+ 		true
+ 	end
+ end	

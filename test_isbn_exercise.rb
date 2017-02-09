@@ -16,7 +16,7 @@ class TestIsbnFunction < Minitest::Test
 	def test_x_replaced_5_still_true_anything_with_length_of_10
 			#it is still true becuase x is counted in the string
 			num = '1234x67890'
-			assert_equal(true, valid_isn_length?(num))
+			assert_equal(true, valid_isbn_length?(num))
 	end
 	def test_remove_spaces #isbn numbers return, minus spaces
 			num = '123 456 789 0' #isbn string
@@ -31,10 +31,10 @@ class TestIsbnFunction < Minitest::Test
 			assert_equal(false, check_for_letters(num))
 	end
 	def test_true_if_x_is_at_the_end
-			num = '123456789x'
+			num = '1234567890x'
 			assert_equal(true, check_for_x(num))
 	end
-	def test_false_if_x_is_at_end
+	def test_false_if_x_is_at_then_end
 			num = '123456789?'
 			assert_equal(false, check_for_x(num))
 	end
@@ -48,10 +48,6 @@ class TestIsbnFunction < Minitest::Test
 	end
 	def test_for_symbols_return_true #true if isbn has symbols
 			num = '123;456:7890'
-			assert_equal(true, check_for_symbols(num))
-	end
-	def test_second_test_for_symbols
-			num = '123;4567890'
 			assert_equal(true, check_for_symbols(num))
 	end
 	def tes_thrid_test_for_symbols #false becuase it does not have symbols
@@ -99,7 +95,7 @@ class TestIsbnFunction < Minitest::Test
 			assert_equal(false, results)
 	end
 	def test_valid_ispn
-		results = valid_ispn?('0132971291')
+		results = valid_isbn?('0132971291')
 		assert_equal(true, results)
 	end
 end
