@@ -7,16 +7,16 @@ class TestIsbnFunction < Minitest::Test
 	end
 	def test_returns_true
 			num = '1234567890'
-			assert_equal(true, valid_ispn_length?(num))
+			assert_equal(true, valid_isbn_length?(num))
 	end
 	def test_returns_false
 			num = '123456789'
-			assert_equal(false, valid_ispn_length?(num))
+			assert_equal(false, valid_isbn_length?(num))
 	end
 	def test_x_replaced_5_still_true_anything_with_length_of_10
 			#it is still true becuase x is counted in the string
 			num = '1234x67890'
-			assert_equal(true, valid_ispn_length?(num))
+			assert_equal(true, valid_isn_length?(num))
 	end
 	def test_remove_spaces #isbn numbers return, minus spaces
 			num = '123 456 789 0' #isbn string
