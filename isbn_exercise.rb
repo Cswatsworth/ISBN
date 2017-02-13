@@ -1,6 +1,6 @@
 def valid_isbn?(num)
 	string_no_dashes_or_spaces = remove_spaces_and_dashes(num)
-		if valid_isbn_length? (string_no_dashes_or_spaces)
+		if valid_isbn_length?(string_no_dashes_or_spaces)
 			true
 		else
 			false
@@ -26,9 +26,9 @@ end
 
 def remove_spaces_and_dashes(isbn_string)
 
-		#isbn_string.gsub(/[ -]/, '')   not working?
-		isbn_string.delete!(' ')# ! makes it pass, no comma between (' ') '-'
-		isbn_string.delete('-')
+		#isbn_string.gsub(/[ -]/, '')  works also
+		isbn_string.delete(' ' '-') #not working with !
+		#isbn_string.delete
 end
 
 def check_for_letters(letters)
@@ -132,12 +132,19 @@ end
 
 def valid_isbn(num)
 		string_no_dashes_or_spaces = remove_spaces_and_dashes(num)
-			if check_for_symbols(string_no_dashes_or_spaces) && remove_spaces_and_dashes == 10
+			
+			if 
+					check_for_symbols(string_no_dashes_or_spaces) && string_no_dashes_or_spaces.length == 10
 					check_for_letters(string_no_dashes_or_spaces)
 					check_for_x(string_no_dashes_or_spaces)
 					compaire_check_digit(string_no_dashes_or_spaces)
-				true
-			else
+			elsif 
+					check_for_symbols(string_no_dashes_or_spaces) && string_no_dashes_or_spaces.length == 13
+					check_for_letters(string_no_dashes_or_spaces)
+					check_for_x(string_no_dashes_or_spaces)
+					compaire_check_digit(string_no_dashes_or_spaces)
+			# 	true
+			 else
 				false
 			end
 end

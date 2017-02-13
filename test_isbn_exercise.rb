@@ -116,6 +116,17 @@ class TestIsbnFunction < Minitest::Test
 			results = valid_isbn?('0132971291')
 			assert_equal(true, results)
 	end
+
+	def test_isbn
+			results = valid_isbn?('0226548996')
+			assert_equal(true, results)  #found using app.rb local site
+	end
+
+	def test_isbn?
+			results = valid_isbn?('8888888888')
+			assert_equal(true, results)
+	end
+
 end
 
 class TestIsbn13 < Minitest::Test
